@@ -1,4 +1,11 @@
 # Based on Cherniuk (https://stackoverflow.com/users/4396618/cerniuk) via https://stackoverflow.com/questions/44346109/how-to-easily-install-and-uninstall-docker-on-macos
+./accept.sh "erase docker"
+if [ $? -ne 0 ]; then
+ echo "Exiting..."
+ exit
+fi
+echo "Erasing docker ..."
+
 sudo echo "Please enter your password to continue..."
 sudo rm -Rf /Applications/Docker.app
 sudo rm -f /usr/local/bin/docker
