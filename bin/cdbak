@@ -2,5 +2,4 @@ curd=`date +%y%m%d`;
 bakdir=~/Backups/$curd
 [ -d $bakdir ] || (echo "$bakdir not exists. Creating."; mkdir $bakdir);
 cd $bakdir;
-echo -n "Cur dir (baks): ";
-pwd;
+echo -n "Cur dir (baks): "; pwd;
